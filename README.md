@@ -59,12 +59,11 @@ and a visible badge when debug is active.
 zip -r akamai-debug-helper.zip background.js manifest.json popup icons
 ```
 
-### GitHub Release Pipeline
-The workflow at `.github/workflows/release.yml` builds a versioned ZIP and
-attaches it to a GitHub Release.
+### GitHub Release Pipeline (Semantic Release)
+The workflow at `.github/workflows/release.yml` runs semantic-release on every
+push to `main`.
 
-Options:
-1. Push a tag like `v0.2.0` to trigger a release build.
-2. Run the workflow manually ("Release Extension") with a version input.
-
-For tagged releases, keep `manifest.json` version aligned with the tag.
+Requirements:
+1. Use Conventional Commits (`feat:`, `fix:`, `chore:`) so releases are cut.
+2. The workflow updates `manifest.json`, writes `CHANGELOG.md`, builds a ZIP,
+   and attaches it to a GitHub Release.

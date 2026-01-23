@@ -1,64 +1,34 @@
 name: Release Extension
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: "Release version (e.g. 0.2.0)"
-        required: true
   push:
-    tags:
-      - "v*.*.*"
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Resolve version
-        id: vars
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            VERSION="${{ inputs.version }}"
-          else
-            VERSION="${GITHUB_REF_NAME#v}"
-          fi
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-
-      - name: Update manifest version
-        env:
-          VERSION: ${{ steps.vars.outputs.version }}
-        run: |
-          python3 - <<'PY'
-          import json
-          import os
-
-          version = os.environ["VERSION"]
-          path = "manifest.json"
-
-          with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-          data["version"] = version
-
-          with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-            f.write("\n")
-          PY
-
-      - name: Build release zip
-        run: |
-          zip -r "akamai-debug-helper-${{ steps.vars.outputs.version }}.zip" \
-            background.js manifest.json popup icons
-
-      - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ steps.vars.outputs.version }}
-          name: v${{ steps.vars.outputs.version }}
-          files: akamai-debug-helper-${{ steps.vars.outputs.version }}.zip
-          generate_release_notes: true
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run release
