@@ -1,0 +1,11 @@
+# 1.0.0 (2026-01-23)
+
+
+### Bug Fixes
+
+* missing package-lock.json ([81f439a](https://github.com/M4n0x/akamai-debug-extension/commit/81f439a86d70305d3019ea4b41896780c419aa19))
+
+
+### Features
+
+* add auto versionning ([56126c7](https://github.com/M4n0x/akamai-debug-extension/commit/56126c7042f30e1d89fed1aeac7cde8365f31383))
