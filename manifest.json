@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Akamai Debug Helper",
+  "description": "Inject Akamai pragma headers and show CDN response details.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Akamai Debug",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "tabs",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-debug": {
+      "suggested_key": {
+        "default": "Alt+Shift+D",
+        "mac": "Command+Shift+D"
+      },
+      "description": "Toggle Akamai debug headers for the active tab"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "akamai-debug-helper@example.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}

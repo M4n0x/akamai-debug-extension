@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Akamai Debug</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Akamai Debug</p>
+          <h1>CDN Insights</h1>
+          <p class="subtitle" id="page-url">No page detected</p>
+        </div>
+        <span class="pill neutral" id="tab-status">Idle</span>
+      </header>
+
+      <section class="toggle-card">
+        <div>
+          <p class="card-title">Debug Headers</p>
+          <p class="card-subtitle">Inject Akamai pragma headers for this tab</p>
+          <p class="card-status" id="injection-status">Header injection inactive</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="debug-toggle" />
+          <span class="slider"></span>
+        </label>
+      </section>
+
+      <section class="status-card">
+        <div>
+          <p class="card-title">Cache Status</p>
+          <p class="card-subtitle" id="cache-summary">No response yet</p>
+        </div>
+        <span class="pill neutral" id="cache-pill">N/A</span>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h2>Cache Details</h2>
+          <div class="row">
+            <span class="label">X-Cache</span>
+            <span class="value" id="x-cache">--</span>
+          </div>
+          <div class="row">
+            <span class="label">X-Cache-Remote</span>
+            <span class="value" id="x-cache-remote">--</span>
+          </div>
+          <div class="row">
+            <span class="label">X-Check-Cacheable</span>
+            <span class="value" id="x-check-cacheable">--</span>
+          </div>
+          <div class="row">
+            <span class="label">Age</span>
+            <span class="value" id="age">--</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Cache Keys</h2>
+          <div class="row">
+            <span class="label">X-Cache-Key</span>
+            <span class="value" id="x-cache-key">--</span>
+          </div>
+          <div class="row">
+            <span class="label">X-True-Cache-Key</span>
+            <span class="value" id="x-true-cache-key">--</span>
+          </div>
+          <div class="row">
+            <span class="label">Cache-Control</span>
+            <span class="value" id="cache-control">--</span>
+          </div>
+          <div class="row">
+            <span class="label">Expires</span>
+            <span class="value" id="expires">--</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Request Info</h2>
+          <div class="row">
+            <span class="label">Request ID</span>
+            <span class="value" id="request-id">--</span>
+          </div>
+          <div class="row">
+            <span class="label">Server</span>
+            <span class="value" id="server">--</span>
+          </div>
+          <div class="row">
+            <span class="label">X-Akamai-Session-Info</span>
+            <span class="value" id="session-info">--</span>
+          </div>
+          <div class="row">
+            <span class="label">X-Akamai-Staging</span>
+            <span class="value" id="staging">--</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Transformations</h2>
+          <div class="row">
+            <span class="label">X-Akamai-Transformed</span>
+            <span class="value" id="transformed">--</span>
+          </div>
+          <div class="row">
+            <span class="label">Content-Type</span>
+            <span class="value" id="content-type">--</span>
+          </div>
+          <div class="row">
+            <span class="label">Status</span>
+            <span class="value" id="status-code">--</span>
+          </div>
+          <div class="row">
+            <span class="label">Last Updated</span>
+            <span class="value" id="last-updated">--</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button class="primary" id="refresh">Refresh</button>
+        <button class="ghost" id="copy">Copy All</button>
+      </section>
+
+      <p class="hint" id="hint">Enable debug and reload to capture headers.</p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
