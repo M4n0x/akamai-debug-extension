@@ -7,8 +7,12 @@ and a visible badge when debug is active.
 ## Features
 - Per-tab debug toggle with session-only persistence
 - Automatic reload when enabling debug
-- Green badge indicator ("DBG") on the extension icon
-- Organized cache, key, and request details with copy-to-clipboard
+- Green badge indicator ("ON") on the extension icon
+- Request history (last 10 main-document requests)
+- Alerts for cache anomalies (HIT → MISS, stale, cache disabled)
+- Force refresh with Cache-Control: no-cache
+- JSON copy/export for sharing diagnostics
+- Organized cache, key, and request details
 - Main-document only (no subresource noise)
 
 ## Install (Development)
@@ -25,8 +29,9 @@ and a visible badge when debug is active.
 ## Usage
 1. Open the popup and toggle "Debug Headers".
 2. The current tab reloads automatically to capture headers.
-3. Look for the green "DBG" badge to confirm debug is active.
-4. Use "Copy All" to share diagnostics.
+3. Look for the green "ON" badge to confirm debug is active.
+4. Review request history, alerts, and cache analysis.
+5. Use "Copy JSON" or "Export JSON" to share diagnostics.
 
 ## Headers
 ### Request (Injected)
