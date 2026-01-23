@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/M4n0x/akamai-debug-extension/compare/v1.0.0...v1.1.0) (2026-01-23)
+
+
+### Features
+
+* add request history and cache analysis ([92f7eb8](https://github.com/M4n0x/akamai-debug-extension/commit/92f7eb8d272acc73f80d0ec9abd4d7570dbf4bc8))
+
 # 1.0.0 (2026-01-23)
 
 
