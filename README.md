@@ -5,6 +5,7 @@ signals in a focused popup. Built for Chrome and Firefox with per-tab toggles
 and a visible badge when debug is active.
 
 ## Features
+
 - Per-tab debug toggle with session-only persistence
 - Automatic reload when enabling debug
 - Green badge indicator ("ON") on the extension icon
@@ -16,25 +17,35 @@ and a visible badge when debug is active.
 - Main-document only (no subresource noise)
 
 ## Install (Development)
+
 ### Chrome
+
 1. Open `chrome://extensions`.
 2. Enable "Developer mode".
 3. Click "Load unpacked" and select the project folder.
 
 ### Firefox
+
 1. Open `about:debugging`.
 2. Click "This Firefox".
 3. Click "Load Temporary Add-on" and select `manifest.json`.
 
 ## Usage
+
 1. Open the popup and toggle "Debug Headers".
 2. The current tab reloads automatically to capture headers.
 3. Look for the green "ON" badge to confirm debug is active.
 4. Review request history, alerts, and cache analysis.
 5. Use "Copy JSON" or "Export JSON" to share diagnostics.
 
+## Screenshots
+
+![Akamai Debug Helper popup](docs/screenshots/popup.png)
+
 ## Headers
+
 ### Request (Injected)
+
 - `Pragma: akamai-x-cache-on`
 - `Pragma: akamai-x-cache-remote-on`
 - `Pragma: akamai-x-check-cacheable`
@@ -44,6 +55,7 @@ and a visible badge when debug is active.
 - `Pragma: akamai-x-get-extracted-values`
 
 ### Response (Displayed)
+
 - `X-Cache`
 - `X-Cache-Remote`
 - `X-Check-Cacheable`
@@ -59,16 +71,20 @@ and a visible badge when debug is active.
 - `Content-Type`
 
 ## Build
+
 ### Local ZIP
+
 ```bash
 zip -r akamai-debug-helper.zip background.js manifest.json popup icons
 ```
 
 ### GitHub Release Pipeline (Semantic Release)
+
 The workflow at `.github/workflows/release.yml` runs semantic-release on every
 push to `main`.
 
 Requirements:
+
 1. Use Conventional Commits (`feat:`, `fix:`, `chore:`) so releases are cut.
 2. The workflow updates `manifest.json`, writes `CHANGELOG.md`, builds a ZIP,
    and attaches it to a GitHub Release.
