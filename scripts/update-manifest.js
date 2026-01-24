@@ -7,10 +7,11 @@ if (!version) {
   process.exit(1);
 }
 
-const path = "manifest.json";
-const data = JSON.parse(fs.readFileSync(path, "utf8"));
+const manifests = ["manifest.json", "manifest.chrome.json"];
 
-data.version = version;
-
-fs.writeFileSync(path, JSON.stringify(data, null, 2) + "\n");
-console.log(`Updated ${path} to ${version}`);
+for (const path of manifests) {
+  const data = JSON.parse(fs.readFileSync(path, "utf8"));
+  data.version = version;
+  fs.writeFileSync(path, JSON.stringify(data, null, 2) + "\n");
+  console.log(`Updated ${path} to ${version}`);
+}
