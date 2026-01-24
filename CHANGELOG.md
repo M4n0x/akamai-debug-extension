@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/M4n0x/akamai-debug-extension/compare/v1.1.4...v1.1.5) (2026-01-24)
+
+
+### Bug Fixes
+
+* Chrome manifest issue ([31936da](https://github.com/M4n0x/akamai-debug-extension/commit/31936da0a8a6790c200af6135c6490fcb65cc4c7))
+
 ## [1.1.4](https://github.com/M4n0x/akamai-debug-extension/compare/v1.1.3...v1.1.4) (2026-01-24)
 
 
