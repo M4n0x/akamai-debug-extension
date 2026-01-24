@@ -40,7 +40,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "916723EE-164A-47AA-8EB9-566ADBA88CC4",
+      "id": "akamai-debug@stevereis.ch",
       "strict_min_version": "109.0",
       "data_collection_permissions": {
         "required": [
