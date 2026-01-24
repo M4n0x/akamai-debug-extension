@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/M4n0x/akamai-debug-extension/compare/v1.1.0...v1.1.1) (2026-01-24)
+
+
+### Bug Fixes
+
+* FF package validation ([ced2863](https://github.com/M4n0x/akamai-debug-extension/commit/ced2863483bb7850077074c652e03eb26f173156))
+
 # [1.1.0](https://github.com/M4n0x/akamai-debug-extension/compare/v1.0.0...v1.1.0) (2026-01-23)
 
 
