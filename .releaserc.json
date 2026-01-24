@@ -7,7 +7,7 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "node scripts/update-manifest.js ${nextRelease.version} && mkdir -p dist && zip -r dist/akamai-debug-helper-${nextRelease.version}-firefox.zip background.js manifest.json popup icons && zip -r dist/akamai-debug-helper-${nextRelease.version}-chrome.zip background.js manifest.chrome.json popup icons && cd dist && unzip -o akamai-debug-helper-${nextRelease.version}-chrome.zip -d chrome-temp && mv chrome-temp/manifest.chrome.json chrome-temp/manifest.json && cd chrome-temp && zip -r ../akamai-debug-helper-${nextRelease.version}-chrome.zip . && cd .. && rm -rf chrome-temp"
+        "prepareCmd": "node scripts/build-release.js ${nextRelease.version}"
       }
     ],
     [
@@ -15,12 +15,12 @@
       {
         "assets": [
           {
-            "path": "dist/akamai-debug-helper-${nextRelease.version}-firefox.zip",
+            "path": "dist/akamai-debug-helper-*-firefox.zip",
             "label": "Firefox Extension ZIP"
           },
           {
-            "path": "dist/akamai-debug-helper-${nextRelease.version}-chrome.zip",
-            "label": "Chrome Extension ZIP"
+            "path": "dist/akamai-debug-helper-*-chromium.zip",
+            "label": "Chromium Extension ZIP"
           }
         ]
       }

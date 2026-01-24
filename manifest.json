@@ -16,13 +16,9 @@
     "tabs",
     "webRequest"
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
+  "host_permissions": ["<all_urls>"],
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "commands": {
     "toggle-debug": {
@@ -43,9 +39,7 @@
       "id": "akamai-debug-helper@example.com",
       "strict_min_version": "109.0",
       "data_collection_permissions": {
-        "required": [
-          "none"
-        ],
+        "required": ["none"],
         "optional": []
       }
     }
