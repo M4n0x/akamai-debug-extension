@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/M4n0x/akamai-debug-extension/compare/v1.1.2...v1.1.3) (2026-01-24)
+
+
+### Bug Fixes
+
+* FF uuid ([26b94ae](https://github.com/M4n0x/akamai-debug-extension/commit/26b94ae136bffa20194a6a50115d1e2268a51f7b))
+
 ## [1.1.2](https://github.com/M4n0x/akamai-debug-extension/compare/v1.1.1...v1.1.2) (2026-01-24)
 
 
