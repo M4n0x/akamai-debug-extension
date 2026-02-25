@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Akamai Debug</title>
+    <title data-i18n="popup_eyebrow">Akamai Debug</title>
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <main class="app">
       <header class="header">
         <div>
-          <p class="eyebrow">Akamai Debug</p>
-          <h1>CDN Insights</h1>
-          <p class="subtitle" id="page-url">No page detected</p>
+          <p class="eyebrow" data-i18n="popup_eyebrow">Akamai Debug</p>
+          <h1 data-i18n="popup_title">CDN Insights</h1>
+          <p class="subtitle" id="page-url" data-i18n="popup_no_page">No page detected</p>
         </div>
-        <span class="pill neutral" id="tab-status">Idle</span>
+        <span class="pill neutral" id="tab-status" data-i18n="status_idle">Idle</span>
       </header>
 
       <section class="toggle-card">
         <div>
-          <p class="card-title">Debug Headers</p>
-          <p class="card-subtitle">Inject Akamai pragma headers for this tab</p>
-          <p class="card-status" id="injection-status">Header injection inactive</p>
+          <p class="card-title" data-i18n="debug_headers_title">Debug Headers</p>
+          <p class="card-subtitle" data-i18n="debug_headers_subtitle">Inject Akamai pragma headers for this tab</p>
+          <p class="card-status" id="injection-status" data-i18n="injection_inactive">Header injection inactive</p>
         </div>
         <label class="switch">
           <input type="checkbox" id="debug-toggle" />
@@ -31,32 +31,32 @@
 
       <section class="status-card">
         <div>
-          <p class="card-title">Cache Status</p>
-          <p class="card-subtitle" id="cache-summary">No response yet</p>
+          <p class="card-title" data-i18n="cache_status_title">Cache Status</p>
+          <p class="card-subtitle" id="cache-summary" data-i18n="cache_no_response">No response yet</p>
         </div>
-        <span class="pill neutral" id="cache-pill">N/A</span>
+        <span class="pill neutral" id="cache-pill" data-i18n="cache_na">N/A</span>
       </section>
 
       <section class="card alerts">
-        <h2>Alerts</h2>
+        <h2 data-i18n="alerts_title">Alerts</h2>
         <div class="alert-list" id="alert-list">
-          <p class="empty">No alerts yet</p>
+          <p class="empty" data-i18n="alerts_empty">No alerts yet</p>
         </div>
       </section>
 
       <section class="card history">
         <div class="section-header">
-          <h2>Request History</h2>
-          <button class="ghost small" id="clear-history" type="button">Clear</button>
+          <h2 data-i18n="history_title">Request History</h2>
+          <button class="ghost small" id="clear-history" type="button" data-i18n="history_clear">Clear</button>
         </div>
         <div class="history-list" id="history-list">
-          <p class="empty">No requests captured yet</p>
+          <p class="empty" data-i18n="history_empty">No requests captured yet</p>
         </div>
       </section>
 
       <section class="grid">
         <div class="card">
-          <h2>Cache Details</h2>
+          <h2 data-i18n="cache_details_title">Cache Details</h2>
           <div class="row">
             <span class="label">X-Cache</span>
             <span class="value" id="x-cache">--</span>
@@ -78,37 +78,37 @@
             <span class="value" id="ttl">--</span>
           </div>
           <div class="row">
-            <span class="label">TTL Remaining</span>
+            <span class="label" data-i18n="label_ttl_remaining">TTL Remaining</span>
             <span class="value" id="ttl-remaining">--</span>
           </div>
         </div>
 
         <div class="card">
-          <h2>Cache Analysis</h2>
+          <h2 data-i18n="cache_analysis_title">Cache Analysis</h2>
           <div class="row">
-            <span class="label">Status</span>
+            <span class="label" data-i18n="label_status">Status</span>
             <span class="value" id="analysis-status">--</span>
           </div>
           <div class="row">
-            <span class="label">Cache Disabled</span>
+            <span class="label" data-i18n="label_cache_disabled">Cache Disabled</span>
             <span class="value" id="cache-disabled">--</span>
           </div>
           <div class="row">
-            <span class="label">Stale</span>
+            <span class="label" data-i18n="label_stale">Stale</span>
             <span class="value" id="stale">--</span>
           </div>
           <div class="row">
-            <span class="label">Key Diff</span>
+            <span class="label" data-i18n="label_key_diff">Key Diff</span>
             <span class="value" id="key-diff">--</span>
           </div>
           <div class="row">
-            <span class="label">Key Changes</span>
+            <span class="label" data-i18n="label_key_changes">Key Changes</span>
             <span class="value" id="key-changes">--</span>
           </div>
         </div>
 
         <div class="card">
-          <h2>Cache Keys</h2>
+          <h2 data-i18n="cache_keys_title">Cache Keys</h2>
           <div class="row">
             <span class="label">X-Cache-Key</span>
             <span class="value" id="x-cache-key">--</span>
@@ -128,13 +128,13 @@
         </div>
 
         <div class="card">
-          <h2>Request Info</h2>
+          <h2 data-i18n="request_info_title">Request Info</h2>
           <div class="row">
-            <span class="label">Request ID</span>
+            <span class="label" data-i18n="label_request_id">Request ID</span>
             <span class="value" id="request-id">--</span>
           </div>
           <div class="row">
-            <span class="label">Server</span>
+            <span class="label" data-i18n="label_server">Server</span>
             <span class="value" id="server">--</span>
           </div>
           <div class="row">
@@ -148,7 +148,7 @@
         </div>
 
         <div class="card">
-          <h2>Transformations</h2>
+          <h2 data-i18n="transformations_title">Transformations</h2>
           <div class="row">
             <span class="label">X-Akamai-Transformed</span>
             <span class="value" id="transformed">--</span>
@@ -158,26 +158,27 @@
             <span class="value" id="content-type">--</span>
           </div>
           <div class="row">
-            <span class="label">Status</span>
+            <span class="label" data-i18n="label_status">Status</span>
             <span class="value" id="status-code">--</span>
           </div>
           <div class="row">
-            <span class="label">Last Updated</span>
+            <span class="label" data-i18n="label_last_updated">Last Updated</span>
             <span class="value" id="last-updated">--</span>
           </div>
         </div>
       </section>
 
       <section class="actions">
-        <button class="primary" id="refresh">Refresh</button>
-        <button class="ghost" id="force-refresh">Force Refresh</button>
-        <button class="ghost" id="copy">Copy JSON</button>
-        <button class="ghost" id="export">Export JSON</button>
+        <button class="primary" id="refresh" data-i18n="action_refresh">Refresh</button>
+        <button class="ghost" id="force-refresh" data-i18n="action_force_refresh">Force Refresh</button>
+        <button class="ghost" id="copy" data-i18n="action_copy_json">Copy JSON</button>
+        <button class="ghost" id="export" data-i18n="action_export_json">Export JSON</button>
       </section>
 
-      <p class="hint" id="hint">Enable debug and reload to capture headers.</p>
+      <p class="hint" id="hint" data-i18n="hint_default">Enable debug and reload to capture headers.</p>
     </main>
 
+    <script src="i18n.js"></script>
     <script src="popup.js"></script>
   </body>
 </html>

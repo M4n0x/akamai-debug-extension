@@ -1,0 +1,235 @@
+{
+  "ext_name": {
+    "message": "Akamai Debug Helper"
+  },
+  "ext_description": {
+    "message": "Inject Akamai pragma headers and show CDN response details."
+  },
+  "cmd_toggle_debug": {
+    "message": "Toggle Akamai debug headers for the active tab"
+  },
+  "popup_eyebrow": {
+    "message": "Akamai Debug"
+  },
+  "popup_title": {
+    "message": "CDN Insights"
+  },
+  "popup_no_page": {
+    "message": "No page detected"
+  },
+  "status_idle": {
+    "message": "Idle"
+  },
+  "status_debug_on": {
+    "message": "Debug On"
+  },
+  "status_debug_off": {
+    "message": "Debug Off"
+  },
+  "debug_headers_title": {
+    "message": "Debug Headers"
+  },
+  "debug_headers_subtitle": {
+    "message": "Inject Akamai pragma headers for this tab"
+  },
+  "injection_inactive": {
+    "message": "Header injection inactive"
+  },
+  "injection_active_rule_missing": {
+    "message": "Header injection active · rule missing"
+  },
+  "injection_active_matched": {
+    "message": "Header injection active · matched $TIME$",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "14:32:01"
+      }
+    }
+  },
+  "injection_active_awaiting": {
+    "message": "Header injection active · awaiting match"
+  },
+  "cache_status_title": {
+    "message": "Cache Status"
+  },
+  "cache_no_response": {
+    "message": "No response yet"
+  },
+  "cache_na": {
+    "message": "N/A"
+  },
+  "alerts_title": {
+    "message": "Alerts"
+  },
+  "alerts_empty": {
+    "message": "No alerts yet"
+  },
+  "history_title": {
+    "message": "Request History"
+  },
+  "history_clear": {
+    "message": "Clear"
+  },
+  "history_empty": {
+    "message": "No requests captured yet"
+  },
+  "cache_details_title": {
+    "message": "Cache Details"
+  },
+  "label_ttl_remaining": {
+    "message": "TTL Remaining"
+  },
+  "cache_analysis_title": {
+    "message": "Cache Analysis"
+  },
+  "label_status": {
+    "message": "Status"
+  },
+  "label_cache_disabled": {
+    "message": "Cache Disabled"
+  },
+  "label_stale": {
+    "message": "Stale"
+  },
+  "label_key_diff": {
+    "message": "Key Diff"
+  },
+  "label_key_changes": {
+    "message": "Key Changes"
+  },
+  "cache_keys_title": {
+    "message": "Cache Keys"
+  },
+  "request_info_title": {
+    "message": "Request Info"
+  },
+  "label_request_id": {
+    "message": "Request ID"
+  },
+  "label_server": {
+    "message": "Server"
+  },
+  "transformations_title": {
+    "message": "Transformations"
+  },
+  "label_last_updated": {
+    "message": "Last Updated"
+  },
+  "action_refresh": {
+    "message": "Refresh"
+  },
+  "action_force_refresh": {
+    "message": "Force Refresh"
+  },
+  "action_copy_json": {
+    "message": "Copy JSON"
+  },
+  "action_export_json": {
+    "message": "Export JSON"
+  },
+  "hint_default": {
+    "message": "Enable debug and reload to capture headers."
+  },
+  "hint_enable_debug": {
+    "message": "Enable debug to capture Akamai headers."
+  },
+  "hint_reload_capture": {
+    "message": "Reload or click Refresh to capture headers."
+  },
+  "hint_headers_captured": {
+    "message": "Headers captured for the current page."
+  },
+  "hint_no_active_tab": {
+    "message": "No active tab found."
+  },
+  "hint_unable_tab_state": {
+    "message": "Unable to read tab state."
+  },
+  "hint_refreshing": {
+    "message": "Refreshing tab to capture headers."
+  },
+  "hint_refresh_failed": {
+    "message": "Failed to refresh the tab."
+  },
+  "hint_copied": {
+    "message": "Copied JSON to clipboard."
+  },
+  "hint_exported": {
+    "message": "Exported JSON file."
+  },
+  "hint_export_failed": {
+    "message": "Failed to export JSON."
+  },
+  "hint_force_refresh_sent": {
+    "message": "Force refresh sent with no-cache header."
+  },
+  "hint_force_refresh_failed": {
+    "message": "Failed to force refresh."
+  },
+  "hint_history_cleared": {
+    "message": "History cleared for this tab."
+  },
+  "hint_history_clear_failed": {
+    "message": "Failed to clear history."
+  },
+  "hint_unable_tab_info": {
+    "message": "Unable to read tab information."
+  },
+  "hint_no_bg_response": {
+    "message": "No response from background script"
+  },
+  "hint_toggle_failed": {
+    "message": "Failed to update debug mode."
+  },
+  "summary_edge": {
+    "message": "Edge: $VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "summary_parent": {
+    "message": "Parent: $VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "bool_yes": {
+    "message": "Yes"
+  },
+  "bool_no": {
+    "message": "No"
+  },
+  "key_match": {
+    "message": "Match"
+  },
+  "key_diff": {
+    "message": "Diff"
+  },
+  "alert_hit_to_miss": {
+    "message": "Cache status changed from HIT to MISS for this URL"
+  },
+  "alert_cache_key_churn": {
+    "message": "High cache key variability detected — may reduce hit rate"
+  },
+  "alert_stale": {
+    "message": "Content is stale (age $AGE$s > max-age $TTL$s)",
+    "placeholders": {
+      "age": {
+        "content": "$1",
+        "example": "3600"
+      },
+      "ttl": {
+        "content": "$2",
+        "example": "1800"
+      }
+    }
+  },
+  "alert_cache_disabled": {
+    "message": "Cache-Control indicates caching is disabled (no-cache or no-store)"
+  }
+}

@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Akamai Debug Helper",
-  "description": "Inject Akamai pragma headers and show CDN response details.",
+  "name": "__MSG_ext_name__",
+  "description": "__MSG_ext_description__",
+  "default_locale": "en",
   "version": "1.1.5",
   "action": {
     "default_title": "Akamai Debug",
@@ -28,7 +29,7 @@
         "default": "Alt+Shift+D",
         "mac": "Command+Shift+D"
       },
-      "description": "Toggle Akamai debug headers for the active tab"
+      "description": "__MSG_cmd_toggle_debug__"
     }
   },
   "icons": {

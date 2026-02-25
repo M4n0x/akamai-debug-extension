@@ -15,7 +15,7 @@ const repoRoot = path.resolve(__dirname, "..");
 const distDir = path.join(repoRoot, "dist");
 const updateManifestScript = path.join(__dirname, "update-manifest.js");
 
-const sharedEntries = ["background.js", "popup", "icons"];
+const sharedEntries = ["background.js", "popup", "icons", "_locales"];
 
 function run(command, options = {}) {
   execSync(command, { stdio: "inherit", ...options });

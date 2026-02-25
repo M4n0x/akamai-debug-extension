@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Akamai Debug Helper",
+  "name": "__MSG_ext_name__",
   "version": "1.1.5",
-  "description": "A Chrome extension to dynamically enable Akamai debug headers",
+  "description": "__MSG_ext_description__",
+  "default_locale": "en",
   "permissions": [
     "activeTab",
     "declarativeNetRequest",
@@ -36,7 +37,7 @@
       "suggested_key": {
         "default": "Alt+Shift+A"
       },
-      "description": "Toggle Akamai Debug Headers"
+      "description": "__MSG_cmd_toggle_debug__"
     }
   }
 }
