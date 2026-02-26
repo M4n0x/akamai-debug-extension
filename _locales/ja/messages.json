@@ -1,0 +1,235 @@
+{
+  "ext_name": {
+    "message": "Akamai Debug Helper"
+  },
+  "ext_description": {
+    "message": "Akamai pragma ヘッダーを挿入し、CDN レスポンスの詳細を表示します。"
+  },
+  "cmd_toggle_debug": {
+    "message": "アクティブなタブの Akamai デバッグヘッダーを切り替え"
+  },
+  "popup_eyebrow": {
+    "message": "Akamai Debug"
+  },
+  "popup_title": {
+    "message": "CDN インサイト"
+  },
+  "popup_no_page": {
+    "message": "ページが検出されません"
+  },
+  "status_idle": {
+    "message": "待機中"
+  },
+  "status_debug_on": {
+    "message": "デバッグ オン"
+  },
+  "status_debug_off": {
+    "message": "デバッグ オフ"
+  },
+  "debug_headers_title": {
+    "message": "デバッグヘッダー"
+  },
+  "debug_headers_subtitle": {
+    "message": "このタブに Akamai pragma ヘッダーを挿入"
+  },
+  "injection_inactive": {
+    "message": "ヘッダー挿入は無効です"
+  },
+  "injection_active_rule_missing": {
+    "message": "ヘッダー挿入は有効 · ルールが見つかりません"
+  },
+  "injection_active_matched": {
+    "message": "ヘッダー挿入は有効 · $TIME$ に一致",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "14:32:01"
+      }
+    }
+  },
+  "injection_active_awaiting": {
+    "message": "ヘッダー挿入は有効 · 一致を待機中"
+  },
+  "cache_status_title": {
+    "message": "キャッシュステータス"
+  },
+  "cache_no_response": {
+    "message": "レスポンスなし"
+  },
+  "cache_na": {
+    "message": "N/A"
+  },
+  "alerts_title": {
+    "message": "アラート"
+  },
+  "alerts_empty": {
+    "message": "アラートなし"
+  },
+  "history_title": {
+    "message": "リクエスト履歴"
+  },
+  "history_clear": {
+    "message": "クリア"
+  },
+  "history_empty": {
+    "message": "キャプチャされたリクエストはありません"
+  },
+  "cache_details_title": {
+    "message": "キャッシュ詳細"
+  },
+  "label_ttl_remaining": {
+    "message": "残り TTL"
+  },
+  "cache_analysis_title": {
+    "message": "キャッシュ分析"
+  },
+  "label_status": {
+    "message": "ステータス"
+  },
+  "label_cache_disabled": {
+    "message": "キャッシュ無効"
+  },
+  "label_stale": {
+    "message": "期限切れ"
+  },
+  "label_key_diff": {
+    "message": "キー差分"
+  },
+  "label_key_changes": {
+    "message": "キー変更"
+  },
+  "cache_keys_title": {
+    "message": "キャッシュキー"
+  },
+  "request_info_title": {
+    "message": "リクエスト情報"
+  },
+  "label_request_id": {
+    "message": "リクエスト ID"
+  },
+  "label_server": {
+    "message": "サーバー"
+  },
+  "transformations_title": {
+    "message": "変換"
+  },
+  "label_last_updated": {
+    "message": "最終更新"
+  },
+  "action_refresh": {
+    "message": "更新"
+  },
+  "action_force_refresh": {
+    "message": "強制更新"
+  },
+  "action_copy_json": {
+    "message": "JSON をコピー"
+  },
+  "action_export_json": {
+    "message": "JSON をエクスポート"
+  },
+  "hint_default": {
+    "message": "デバッグを有効にしてリロードし、ヘッダーをキャプチャしてください。"
+  },
+  "hint_enable_debug": {
+    "message": "Akamai ヘッダーをキャプチャするにはデバッグを有効にしてください。"
+  },
+  "hint_reload_capture": {
+    "message": "リロードまたは更新をクリックしてヘッダーをキャプチャしてください。"
+  },
+  "hint_headers_captured": {
+    "message": "現在のページのヘッダーがキャプチャされました。"
+  },
+  "hint_no_active_tab": {
+    "message": "アクティブなタブが見つかりません。"
+  },
+  "hint_unable_tab_state": {
+    "message": "タブの状態を読み取れません。"
+  },
+  "hint_refreshing": {
+    "message": "ヘッダーをキャプチャするためにタブを更新しています。"
+  },
+  "hint_refresh_failed": {
+    "message": "タブの更新に失敗しました。"
+  },
+  "hint_copied": {
+    "message": "JSON をクリップボードにコピーしました。"
+  },
+  "hint_exported": {
+    "message": "JSON ファイルをエクスポートしました。"
+  },
+  "hint_export_failed": {
+    "message": "JSON のエクスポートに失敗しました。"
+  },
+  "hint_force_refresh_sent": {
+    "message": "no-cache ヘッダー付きで強制更新を送信しました。"
+  },
+  "hint_force_refresh_failed": {
+    "message": "強制更新に失敗しました。"
+  },
+  "hint_history_cleared": {
+    "message": "このタブの履歴をクリアしました。"
+  },
+  "hint_history_clear_failed": {
+    "message": "履歴のクリアに失敗しました。"
+  },
+  "hint_unable_tab_info": {
+    "message": "タブ情報を読み取れません。"
+  },
+  "hint_no_bg_response": {
+    "message": "バックグラウンドスクリプトからの応答なし"
+  },
+  "hint_toggle_failed": {
+    "message": "デバッグモードの更新に失敗しました。"
+  },
+  "summary_edge": {
+    "message": "Edge: $VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "summary_parent": {
+    "message": "Parent: $VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "bool_yes": {
+    "message": "はい"
+  },
+  "bool_no": {
+    "message": "いいえ"
+  },
+  "key_match": {
+    "message": "一致"
+  },
+  "key_diff": {
+    "message": "差分"
+  },
+  "alert_hit_to_miss": {
+    "message": "この URL のキャッシュステータスが HIT から MISS に変更されました"
+  },
+  "alert_cache_key_churn": {
+    "message": "キャッシュキーの変動が大きいことを検出 — ヒット率が低下する可能性があります"
+  },
+  "alert_stale": {
+    "message": "コンテンツが期限切れです（age $AGE$s > max-age $TTL$s）",
+    "placeholders": {
+      "age": {
+        "content": "$1",
+        "example": "3600"
+      },
+      "ttl": {
+        "content": "$2",
+        "example": "1800"
+      }
+    }
+  },
+  "alert_cache_disabled": {
+    "message": "Cache-Control はキャッシュが無効であることを示しています（no-cache または no-store）"
+  }
+}
