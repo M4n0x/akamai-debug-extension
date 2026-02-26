@@ -4,9 +4,12 @@
   "version": "0.0.0",
   "description": "Akamai debug helper extension",
   "scripts": {
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "screenshots": "node scripts/capture-screenshots.js"
   },
   "devDependencies": {
+    "playwright": "^1.54.2",
+    "sharp": "^0.34.3",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/commit-analyzer": "^11.1.0",
     "@semantic-release/exec": "^6.0.3",
