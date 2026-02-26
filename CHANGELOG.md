@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/M4n0x/akamai-debug-extension/compare/v1.2.0...v1.3.0) (2026-02-26)
+
+
+### Features
+
+* add automated screenshot capture for Chrome and Firefox stores ([6d4dfe1](https://github.com/M4n0x/akamai-debug-extension/commit/6d4dfe19e0556c2ba891a4ef73a166aae89a92f1))
+
 # [1.2.0](https://github.com/M4n0x/akamai-debug-extension/compare/v1.1.5...v1.2.0) (2026-02-26)
 
 
