@@ -1,0 +1,235 @@
+{
+  "ext_name": {
+    "message": "Akamai Debug Helper"
+  },
+  "ext_description": {
+    "message": "Injecter les en-têtes pragma Akamai et afficher les détails de réponse CDN."
+  },
+  "cmd_toggle_debug": {
+    "message": "Activer/désactiver les en-têtes de debug Akamai pour l'onglet actif"
+  },
+  "popup_eyebrow": {
+    "message": "Akamai Debug"
+  },
+  "popup_title": {
+    "message": "Aperçu CDN"
+  },
+  "popup_no_page": {
+    "message": "Aucune page détectée"
+  },
+  "status_idle": {
+    "message": "Inactif"
+  },
+  "status_debug_on": {
+    "message": "Debug activé"
+  },
+  "status_debug_off": {
+    "message": "Debug désactivé"
+  },
+  "debug_headers_title": {
+    "message": "En-têtes de debug"
+  },
+  "debug_headers_subtitle": {
+    "message": "Injecter les en-têtes pragma Akamai pour cet onglet"
+  },
+  "injection_inactive": {
+    "message": "Injection d'en-têtes inactive"
+  },
+  "injection_active_rule_missing": {
+    "message": "Injection d'en-têtes active · règle manquante"
+  },
+  "injection_active_matched": {
+    "message": "Injection d'en-têtes active · correspondance $TIME$",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "14:32:01"
+      }
+    }
+  },
+  "injection_active_awaiting": {
+    "message": "Injection d'en-têtes active · en attente"
+  },
+  "cache_status_title": {
+    "message": "Statut du cache"
+  },
+  "cache_no_response": {
+    "message": "Aucune réponse"
+  },
+  "cache_na": {
+    "message": "N/A"
+  },
+  "alerts_title": {
+    "message": "Alertes"
+  },
+  "alerts_empty": {
+    "message": "Aucune alerte"
+  },
+  "history_title": {
+    "message": "Historique des requêtes"
+  },
+  "history_clear": {
+    "message": "Effacer"
+  },
+  "history_empty": {
+    "message": "Aucune requête capturée"
+  },
+  "cache_details_title": {
+    "message": "Détails du cache"
+  },
+  "label_ttl_remaining": {
+    "message": "TTL restant"
+  },
+  "cache_analysis_title": {
+    "message": "Analyse du cache"
+  },
+  "label_status": {
+    "message": "Statut"
+  },
+  "label_cache_disabled": {
+    "message": "Cache désactivé"
+  },
+  "label_stale": {
+    "message": "Périmé"
+  },
+  "label_key_diff": {
+    "message": "Diff. clé"
+  },
+  "label_key_changes": {
+    "message": "Changements de clé"
+  },
+  "cache_keys_title": {
+    "message": "Clés de cache"
+  },
+  "request_info_title": {
+    "message": "Infos requête"
+  },
+  "label_request_id": {
+    "message": "ID requête"
+  },
+  "label_server": {
+    "message": "Serveur"
+  },
+  "transformations_title": {
+    "message": "Transformations"
+  },
+  "label_last_updated": {
+    "message": "Dernière mise à jour"
+  },
+  "action_refresh": {
+    "message": "Rafraîchir"
+  },
+  "action_force_refresh": {
+    "message": "Forcer le rafraîchissement"
+  },
+  "action_copy_json": {
+    "message": "Copier JSON"
+  },
+  "action_export_json": {
+    "message": "Exporter JSON"
+  },
+  "hint_default": {
+    "message": "Activez le debug et rechargez pour capturer les en-têtes."
+  },
+  "hint_enable_debug": {
+    "message": "Activez le debug pour capturer les en-têtes Akamai."
+  },
+  "hint_reload_capture": {
+    "message": "Rechargez ou cliquez sur Rafraîchir pour capturer les en-têtes."
+  },
+  "hint_headers_captured": {
+    "message": "En-têtes capturés pour la page actuelle."
+  },
+  "hint_no_active_tab": {
+    "message": "Aucun onglet actif trouvé."
+  },
+  "hint_unable_tab_state": {
+    "message": "Impossible de lire l'état de l'onglet."
+  },
+  "hint_refreshing": {
+    "message": "Rafraîchissement de l'onglet pour capturer les en-têtes."
+  },
+  "hint_refresh_failed": {
+    "message": "Échec du rafraîchissement de l'onglet."
+  },
+  "hint_copied": {
+    "message": "JSON copié dans le presse-papiers."
+  },
+  "hint_exported": {
+    "message": "Fichier JSON exporté."
+  },
+  "hint_export_failed": {
+    "message": "Échec de l'export JSON."
+  },
+  "hint_force_refresh_sent": {
+    "message": "Rafraîchissement forcé envoyé avec l'en-tête no-cache."
+  },
+  "hint_force_refresh_failed": {
+    "message": "Échec du rafraîchissement forcé."
+  },
+  "hint_history_cleared": {
+    "message": "Historique effacé pour cet onglet."
+  },
+  "hint_history_clear_failed": {
+    "message": "Échec de la suppression de l'historique."
+  },
+  "hint_unable_tab_info": {
+    "message": "Impossible de lire les informations de l'onglet."
+  },
+  "hint_no_bg_response": {
+    "message": "Pas de réponse du script en arrière-plan"
+  },
+  "hint_toggle_failed": {
+    "message": "Échec de la mise à jour du mode debug."
+  },
+  "summary_edge": {
+    "message": "Edge : $VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "summary_parent": {
+    "message": "Parent : $VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "bool_yes": {
+    "message": "Oui"
+  },
+  "bool_no": {
+    "message": "Non"
+  },
+  "key_match": {
+    "message": "Identique"
+  },
+  "key_diff": {
+    "message": "Différent"
+  },
+  "alert_hit_to_miss": {
+    "message": "Le statut du cache est passé de HIT à MISS pour cette URL"
+  },
+  "alert_cache_key_churn": {
+    "message": "Forte variabilité des clés de cache détectée — peut réduire le taux de hit"
+  },
+  "alert_stale": {
+    "message": "Contenu périmé (age $AGE$s > max-age $TTL$s)",
+    "placeholders": {
+      "age": {
+        "content": "$1",
+        "example": "3600"
+      },
+      "ttl": {
+        "content": "$2",
+        "example": "1800"
+      }
+    }
+  },
+  "alert_cache_disabled": {
+    "message": "Cache-Control indique que le cache est désactivé (no-cache ou no-store)"
+  }
+}

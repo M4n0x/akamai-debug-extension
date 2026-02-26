@@ -1,0 +1,235 @@
+{
+  "ext_name": {
+    "message": "Akamai Debug Helper"
+  },
+  "ext_description": {
+    "message": "Akamai pragma 헤더를 삽입하고 CDN 응답 세부 정보를 표시합니다."
+  },
+  "cmd_toggle_debug": {
+    "message": "현재 탭의 Akamai 디버그 헤더 전환"
+  },
+  "popup_eyebrow": {
+    "message": "Akamai Debug"
+  },
+  "popup_title": {
+    "message": "CDN 인사이트"
+  },
+  "popup_no_page": {
+    "message": "페이지가 감지되지 않음"
+  },
+  "status_idle": {
+    "message": "대기 중"
+  },
+  "status_debug_on": {
+    "message": "디버그 켜짐"
+  },
+  "status_debug_off": {
+    "message": "디버그 꺼짐"
+  },
+  "debug_headers_title": {
+    "message": "디버그 헤더"
+  },
+  "debug_headers_subtitle": {
+    "message": "이 탭에 Akamai pragma 헤더 삽입"
+  },
+  "injection_inactive": {
+    "message": "헤더 삽입 비활성"
+  },
+  "injection_active_rule_missing": {
+    "message": "헤더 삽입 활성 · 규칙 누락"
+  },
+  "injection_active_matched": {
+    "message": "헤더 삽입 활성 · $TIME$ 일치",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "14:32:01"
+      }
+    }
+  },
+  "injection_active_awaiting": {
+    "message": "헤더 삽입 활성 · 일치 대기 중"
+  },
+  "cache_status_title": {
+    "message": "캐시 상태"
+  },
+  "cache_no_response": {
+    "message": "아직 응답 없음"
+  },
+  "cache_na": {
+    "message": "N/A"
+  },
+  "alerts_title": {
+    "message": "알림"
+  },
+  "alerts_empty": {
+    "message": "아직 알림 없음"
+  },
+  "history_title": {
+    "message": "요청 기록"
+  },
+  "history_clear": {
+    "message": "지우기"
+  },
+  "history_empty": {
+    "message": "아직 캡처된 요청 없음"
+  },
+  "cache_details_title": {
+    "message": "캐시 세부 정보"
+  },
+  "label_ttl_remaining": {
+    "message": "남은 TTL"
+  },
+  "cache_analysis_title": {
+    "message": "캐시 분석"
+  },
+  "label_status": {
+    "message": "상태"
+  },
+  "label_cache_disabled": {
+    "message": "캐시 비활성화됨"
+  },
+  "label_stale": {
+    "message": "만료됨"
+  },
+  "label_key_diff": {
+    "message": "키 차이"
+  },
+  "label_key_changes": {
+    "message": "키 변경"
+  },
+  "cache_keys_title": {
+    "message": "캐시 키"
+  },
+  "request_info_title": {
+    "message": "요청 정보"
+  },
+  "label_request_id": {
+    "message": "요청 ID"
+  },
+  "label_server": {
+    "message": "서버"
+  },
+  "transformations_title": {
+    "message": "변환"
+  },
+  "label_last_updated": {
+    "message": "마지막 업데이트"
+  },
+  "action_refresh": {
+    "message": "새로고침"
+  },
+  "action_force_refresh": {
+    "message": "강제 새로고침"
+  },
+  "action_copy_json": {
+    "message": "JSON 복사"
+  },
+  "action_export_json": {
+    "message": "JSON 내보내기"
+  },
+  "hint_default": {
+    "message": "디버그를 활성화하고 페이지를 새로고침하여 헤더를 캡처하세요."
+  },
+  "hint_enable_debug": {
+    "message": "Akamai 헤더를 캡처하려면 디버그를 활성화하세요."
+  },
+  "hint_reload_capture": {
+    "message": "페이지를 새로고침하거나 새로고침 버튼을 클릭하여 헤더를 캡처하세요."
+  },
+  "hint_headers_captured": {
+    "message": "현재 페이지의 헤더가 캡처되었습니다."
+  },
+  "hint_no_active_tab": {
+    "message": "활성 탭을 찾을 수 없습니다."
+  },
+  "hint_unable_tab_state": {
+    "message": "탭 상태를 읽을 수 없습니다."
+  },
+  "hint_refreshing": {
+    "message": "헤더를 캡처하기 위해 탭을 새로고침하는 중입니다."
+  },
+  "hint_refresh_failed": {
+    "message": "탭 새로고침에 실패했습니다."
+  },
+  "hint_copied": {
+    "message": "JSON이 클립보드에 복사되었습니다."
+  },
+  "hint_exported": {
+    "message": "JSON 파일이 내보내기되었습니다."
+  },
+  "hint_export_failed": {
+    "message": "JSON 내보내기에 실패했습니다."
+  },
+  "hint_force_refresh_sent": {
+    "message": "no-cache 헤더와 함께 강제 새로고침이 전송되었습니다."
+  },
+  "hint_force_refresh_failed": {
+    "message": "강제 새로고침에 실패했습니다."
+  },
+  "hint_history_cleared": {
+    "message": "이 탭의 기록이 삭제되었습니다."
+  },
+  "hint_history_clear_failed": {
+    "message": "기록 삭제에 실패했습니다."
+  },
+  "hint_unable_tab_info": {
+    "message": "탭 정보를 읽을 수 없습니다."
+  },
+  "hint_no_bg_response": {
+    "message": "백그라운드 스크립트로부터 응답 없음"
+  },
+  "hint_toggle_failed": {
+    "message": "디버그 모드 업데이트에 실패했습니다."
+  },
+  "summary_edge": {
+    "message": "Edge: $VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "summary_parent": {
+    "message": "Parent: $VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "bool_yes": {
+    "message": "예"
+  },
+  "bool_no": {
+    "message": "아니오"
+  },
+  "key_match": {
+    "message": "일치"
+  },
+  "key_diff": {
+    "message": "차이"
+  },
+  "alert_hit_to_miss": {
+    "message": "이 URL의 캐시 상태가 HIT에서 MISS로 변경되었습니다"
+  },
+  "alert_cache_key_churn": {
+    "message": "캐시 키 변동성이 높음 — 히트율이 감소할 수 있습니다"
+  },
+  "alert_stale": {
+    "message": "콘텐츠가 만료되었습니다 (age $AGE$s > max-age $TTL$s)",
+    "placeholders": {
+      "age": {
+        "content": "$1",
+        "example": "3600"
+      },
+      "ttl": {
+        "content": "$2",
+        "example": "1800"
+      }
+    }
+  },
+  "alert_cache_disabled": {
+    "message": "Cache-Control이 캐싱 비활성화를 나타냅니다 (no-cache 또는 no-store)"
+  }
+}

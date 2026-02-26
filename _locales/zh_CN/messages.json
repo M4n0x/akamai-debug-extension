@@ -1,0 +1,235 @@
+{
+  "ext_name": {
+    "message": "Akamai Debug Helper"
+  },
+  "ext_description": {
+    "message": "注入 Akamai pragma 标头并显示 CDN 响应详情。"
+  },
+  "cmd_toggle_debug": {
+    "message": "切换当前标签页的 Akamai 调试标头"
+  },
+  "popup_eyebrow": {
+    "message": "Akamai Debug"
+  },
+  "popup_title": {
+    "message": "CDN 洞察"
+  },
+  "popup_no_page": {
+    "message": "未检测到页面"
+  },
+  "status_idle": {
+    "message": "空闲"
+  },
+  "status_debug_on": {
+    "message": "调试已开启"
+  },
+  "status_debug_off": {
+    "message": "调试已关闭"
+  },
+  "debug_headers_title": {
+    "message": "调试标头"
+  },
+  "debug_headers_subtitle": {
+    "message": "为此标签页注入 Akamai pragma 标头"
+  },
+  "injection_inactive": {
+    "message": "标头注入未激活"
+  },
+  "injection_active_rule_missing": {
+    "message": "标头注入已激活 · 缺少规则"
+  },
+  "injection_active_matched": {
+    "message": "标头注入已激活 · 匹配于 $TIME$",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "14:32:01"
+      }
+    }
+  },
+  "injection_active_awaiting": {
+    "message": "标头注入已激活 · 等待匹配"
+  },
+  "cache_status_title": {
+    "message": "缓存状态"
+  },
+  "cache_no_response": {
+    "message": "暂无响应"
+  },
+  "cache_na": {
+    "message": "N/A"
+  },
+  "alerts_title": {
+    "message": "告警"
+  },
+  "alerts_empty": {
+    "message": "暂无告警"
+  },
+  "history_title": {
+    "message": "请求历史"
+  },
+  "history_clear": {
+    "message": "清除"
+  },
+  "history_empty": {
+    "message": "暂无已捕获的请求"
+  },
+  "cache_details_title": {
+    "message": "缓存详情"
+  },
+  "label_ttl_remaining": {
+    "message": "剩余 TTL"
+  },
+  "cache_analysis_title": {
+    "message": "缓存分析"
+  },
+  "label_status": {
+    "message": "状态"
+  },
+  "label_cache_disabled": {
+    "message": "缓存已禁用"
+  },
+  "label_stale": {
+    "message": "已过期"
+  },
+  "label_key_diff": {
+    "message": "键差异"
+  },
+  "label_key_changes": {
+    "message": "键变更"
+  },
+  "cache_keys_title": {
+    "message": "缓存键"
+  },
+  "request_info_title": {
+    "message": "请求信息"
+  },
+  "label_request_id": {
+    "message": "请求 ID"
+  },
+  "label_server": {
+    "message": "服务器"
+  },
+  "transformations_title": {
+    "message": "转换"
+  },
+  "label_last_updated": {
+    "message": "最近更新"
+  },
+  "action_refresh": {
+    "message": "刷新"
+  },
+  "action_force_refresh": {
+    "message": "强制刷新"
+  },
+  "action_copy_json": {
+    "message": "复制 JSON"
+  },
+  "action_export_json": {
+    "message": "导出 JSON"
+  },
+  "hint_default": {
+    "message": "启用调试并重新加载以捕获标头。"
+  },
+  "hint_enable_debug": {
+    "message": "启用调试以捕获 Akamai 标头。"
+  },
+  "hint_reload_capture": {
+    "message": "重新加载或点击刷新以捕获标头。"
+  },
+  "hint_headers_captured": {
+    "message": "已捕获当前页面的标头。"
+  },
+  "hint_no_active_tab": {
+    "message": "未找到活动标签页。"
+  },
+  "hint_unable_tab_state": {
+    "message": "无法读取标签页状态。"
+  },
+  "hint_refreshing": {
+    "message": "正在刷新标签页以捕获标头。"
+  },
+  "hint_refresh_failed": {
+    "message": "刷新标签页失败。"
+  },
+  "hint_copied": {
+    "message": "JSON 已复制到剪贴板。"
+  },
+  "hint_exported": {
+    "message": "JSON 文件已导出。"
+  },
+  "hint_export_failed": {
+    "message": "导出 JSON 失败。"
+  },
+  "hint_force_refresh_sent": {
+    "message": "已发送带 no-cache 标头的强制刷新。"
+  },
+  "hint_force_refresh_failed": {
+    "message": "强制刷新失败。"
+  },
+  "hint_history_cleared": {
+    "message": "此标签页的历史记录已清除。"
+  },
+  "hint_history_clear_failed": {
+    "message": "清除历史记录失败。"
+  },
+  "hint_unable_tab_info": {
+    "message": "无法读取标签页信息。"
+  },
+  "hint_no_bg_response": {
+    "message": "后台脚本无响应"
+  },
+  "hint_toggle_failed": {
+    "message": "更新调试模式失败。"
+  },
+  "summary_edge": {
+    "message": "Edge：$VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "summary_parent": {
+    "message": "Parent：$VALUE$",
+    "placeholders": {
+      "value": {
+        "content": "$1"
+      }
+    }
+  },
+  "bool_yes": {
+    "message": "是"
+  },
+  "bool_no": {
+    "message": "否"
+  },
+  "key_match": {
+    "message": "匹配"
+  },
+  "key_diff": {
+    "message": "差异"
+  },
+  "alert_hit_to_miss": {
+    "message": "此 URL 的缓存状态从 HIT 变为 MISS"
+  },
+  "alert_cache_key_churn": {
+    "message": "检测到缓存键高度变化——可能降低命中率"
+  },
+  "alert_stale": {
+    "message": "内容已过期（age $AGE$s > max-age $TTL$s）",
+    "placeholders": {
+      "age": {
+        "content": "$1",
+        "example": "3600"
+      },
+      "ttl": {
+        "content": "$2",
+        "example": "1800"
+      }
+    }
+  },
+  "alert_cache_disabled": {
+    "message": "Cache-Control 表明缓存已禁用（no-cache 或 no-store）"
+  }
+}

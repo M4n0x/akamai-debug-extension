@@ -1,6 +1,12 @@
 const api = typeof browser !== "undefined" ? browser : chrome;
 const isBrowserApi = typeof browser !== "undefined";
 
+const i18nApi = api.i18n;
+const t = (key, substitutions) => {
+  const message = i18nApi.getMessage(key, substitutions);
+  return message || key;
+};
+
 const EMPTY = "--";
 const REFRESH_INTERVAL = 1500;
 
@@ -66,7 +72,7 @@ const setPill = (element, variant, text) => {
 
 const formatUrl = (url) => {
   if (!url) {
-    return "No page detected";
+    return t("popup_no_page");
   }
   try {
     const parsed = new URL(url);
@@ -98,7 +104,7 @@ const formatBoolean = (value) => {
   if (value === null || value === undefined) {
     return EMPTY;
   }
-  return value ? "Yes" : "No";
+  return value ? t("bool_yes") : t("bool_no");
 };
 
 const getHeaderValue = (headers, key) => {
@@ -119,18 +125,18 @@ const deriveCacheStatus = (xCache, xCacheRemote) => {
   if (combined.includes("bypass") || combined.includes("refresh") || combined.includes("pass")) {
     return { label: "BYPASS", variant: "bypass" };
   }
-  return { label: "N/A", variant: "neutral" };
+  return { label: t("cache_na"), variant: "neutral" };
 };
 
 const buildCacheSummary = (xCache, xCacheRemote) => {
   const parts = [];
   if (xCache !== EMPTY) {
-    parts.push(`Edge: ${xCache}`);
+    parts.push(t("summary_edge", [xCache]));
   }
   if (xCacheRemote !== EMPTY) {
-    parts.push(`Parent: ${xCacheRemote}`);
+    parts.push(t("summary_parent", [xCacheRemote]));
   }
-  return parts.length ? parts.join(" | ") : "No response yet";
+  return parts.length ? parts.join(" | ") : t("cache_no_response");
 };
 
 const getSelectedEntry = () => {
@@ -164,7 +170,7 @@ const updateFields = (entry) => {
     ? Math.max(analysis.ttl - analysis.age, 0)
     : null;
   const keyDiff = entry && entry.xCacheKey && entry.xTrueCacheKey
-    ? (entry.xCacheKey === entry.xTrueCacheKey ? "Match" : "Diff")
+    ? (entry.xCacheKey === entry.xTrueCacheKey ? t("key_match") : t("key_diff"))
     : EMPTY;
   const keyChangesCount = state.history.length
     ? new Set(state.history.map((item) => item.xCacheKey).filter(Boolean)).size
@@ -205,7 +211,7 @@ const updateAlerts = () => {
   if (!state.alerts || state.alerts.length === 0) {
     const empty = document.createElement("p");
     empty.className = "empty";
-    empty.textContent = "No alerts yet";
+    empty.textContent = t("alerts_empty");
     elements.alertList.appendChild(empty);
     return;
   }
@@ -238,7 +244,7 @@ const updateHistory = () => {
   if (!state.history || state.history.length === 0) {
     const empty = document.createElement("p");
     empty.className = "empty";
-    empty.textContent = "No requests captured yet";
+    empty.textContent = t("history_empty");
     elements.historyList.appendChild(empty);
     return;
   }
@@ -278,27 +284,27 @@ const updateHistory = () => {
 
 const updateHint = () => {
   if (!state.enabled) {
-    elements.hint.textContent = "Enable debug to capture Akamai headers.";
+    elements.hint.textContent = t("hint_enable_debug");
     return;
   }
   if (!state.data || !state.data.headers) {
-    elements.hint.textContent = "Reload or click Refresh to capture headers.";
+    elements.hint.textContent = t("hint_reload_capture");
     return;
   }
-  elements.hint.textContent = "Headers captured for the current page.";
+  elements.hint.textContent = t("hint_headers_captured");
 };
 
 const updateView = () => {
   elements.debugToggle.checked = state.enabled;
-  setPill(elements.tabStatus, state.enabled ? "hit" : "neutral", state.enabled ? "Debug On" : "Debug Off");
+  setPill(elements.tabStatus, state.enabled ? "hit" : "neutral", state.enabled ? t("status_debug_on") : t("status_debug_off"));
   if (!state.enabled) {
-    elements.injectionStatus.textContent = "Header injection inactive";
+    elements.injectionStatus.textContent = t("injection_inactive");
   } else if (!state.ruleInstalled) {
-    elements.injectionStatus.textContent = "Header injection active · rule missing";
+    elements.injectionStatus.textContent = t("injection_active_rule_missing");
   } else if (state.ruleMatch && state.ruleMatch.timestamp) {
-    elements.injectionStatus.textContent = `Header injection active · matched ${formatTimestamp(state.ruleMatch.timestamp)}`;
+    elements.injectionStatus.textContent = t("injection_active_matched", [formatTimestamp(state.ruleMatch.timestamp)]);
   } else {
-    elements.injectionStatus.textContent = "Header injection active · awaiting match";
+    elements.injectionStatus.textContent = t("injection_active_awaiting");
   }
   elements.injectionStatus.classList.toggle("active", state.enabled);
 
@@ -347,7 +353,7 @@ const refreshState = async () => {
   }
   const response = await sendMessage({ type: "getTabState", tabId: state.tabId });
   if (!response || response.error) {
-    elements.hint.textContent = "Unable to read tab state.";
+    elements.hint.textContent = t("hint_unable_tab_state");
     return;
   }
   state.enabled = !!response.enabled;
@@ -407,11 +413,11 @@ const handleToggle = async () => {
       elements.hint.textContent = response.error;
     } else {
       elements.debugToggle.checked = wasEnabled;
-      elements.hint.textContent = "No response from background script";
+      elements.hint.textContent = t("hint_no_bg_response");
     }
   } catch (error) {
     elements.debugToggle.checked = wasEnabled;
-    elements.hint.textContent = error && error.message ? error.message : "Failed to update debug mode.";
+    elements.hint.textContent = error && error.message ? error.message : t("hint_toggle_failed");
   } finally {
     elements.debugToggle.disabled = false;
   }
@@ -423,9 +429,9 @@ const handleRefresh = async () => {
   }
   try {
     await sendMessage({ type: "refreshTab", tabId: state.tabId });
-    elements.hint.textContent = "Refreshing tab to capture headers.";
+    elements.hint.textContent = t("hint_refreshing");
   } catch (error) {
-    elements.hint.textContent = "Failed to refresh the tab.";
+    elements.hint.textContent = t("hint_refresh_failed");
   }
 };
 
@@ -445,7 +451,7 @@ const handleCopy = async () => {
   const text = JSON.stringify(buildCopyPayload(), null, 2);
   try {
     await navigator.clipboard.writeText(text);
-    elements.hint.textContent = "Copied JSON to clipboard.";
+    elements.hint.textContent = t("hint_copied");
   } catch (error) {
     const textarea = document.createElement("textarea");
     textarea.value = text;
@@ -456,7 +462,7 @@ const handleCopy = async () => {
     textarea.select();
     document.execCommand("copy");
     textarea.remove();
-    elements.hint.textContent = "Copied JSON to clipboard.";
+    elements.hint.textContent = t("hint_copied");
   }
 };
 
@@ -467,7 +473,7 @@ const handleExport = async () => {
   try {
     const response = await sendMessage({ type: "exportJSON", tabId: state.tabId });
     if (!response || response.error) {
-      elements.hint.textContent = "Failed to export JSON.";
+      elements.hint.textContent = t("hint_export_failed");
       return;
     }
     const data = response.data || {};
@@ -478,9 +484,9 @@ const handleExport = async () => {
     anchor.download = `akamai-debug-${state.tabId}.json`;
     anchor.click();
     URL.revokeObjectURL(url);
-    elements.hint.textContent = "Exported JSON file.";
+    elements.hint.textContent = t("hint_exported");
   } catch (error) {
-    elements.hint.textContent = "Failed to export JSON.";
+    elements.hint.textContent = t("hint_export_failed");
   }
 };
 
@@ -490,9 +496,9 @@ const handleForceRefresh = async () => {
   }
   try {
     await sendMessage({ type: "forceRefresh", tabId: state.tabId });
-    elements.hint.textContent = "Force refresh sent with no-cache header.";
+    elements.hint.textContent = t("hint_force_refresh_sent");
   } catch (error) {
-    elements.hint.textContent = "Failed to force refresh.";
+    elements.hint.textContent = t("hint_force_refresh_failed");
   }
 };
 
@@ -503,16 +509,16 @@ const handleClearHistory = async () => {
   try {
     const response = await sendMessage({ type: "clearHistory", tabId: state.tabId });
     if (response && response.error) {
-      elements.hint.textContent = "Failed to clear history.";
+      elements.hint.textContent = t("hint_history_clear_failed");
       return;
     }
     state.history = [];
     state.alerts = [];
     state.selectedIndex = 0;
     updateView();
-    elements.hint.textContent = "History cleared for this tab.";
+    elements.hint.textContent = t("hint_history_cleared");
   } catch (error) {
-    elements.hint.textContent = "Failed to clear history.";
+    elements.hint.textContent = t("hint_history_clear_failed");
   }
 };
 
@@ -520,7 +526,7 @@ const init = async () => {
   try {
     const tabs = await getTabs({ active: true, currentWindow: true });
     if (!tabs || tabs.length === 0) {
-      elements.hint.textContent = "No active tab found.";
+      elements.hint.textContent = t("hint_no_active_tab");
       return;
     }
     state.tabId = tabs[0].id;
@@ -528,7 +534,7 @@ const init = async () => {
     await refreshState();
     startPolling();
   } catch (error) {
-    elements.hint.textContent = "Unable to read tab information.";
+    elements.hint.textContent = t("hint_unable_tab_info");
   }
 };
 

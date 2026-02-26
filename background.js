@@ -1,6 +1,12 @@
 const api = typeof browser !== "undefined" ? browser : chrome;
 const isBrowserApi = typeof browser !== "undefined";
 
+const i18nApi = api.i18n;
+const t = (key, substitutions) => {
+  const message = i18nApi.getMessage(key, substitutions);
+  return message || key;
+};
+
 const actionApi = api.action || api.browserAction;
 const rulesApi = api.declarativeNetRequest || null;
 const useSessionRules = rulesApi && typeof rulesApi.updateSessionRules === "function";
@@ -108,7 +114,7 @@ const addToHistory = (tabId, entry) => {
       const alerts = tabAlerts.get(tabId) || [];
       alerts.push({
         type: 'hit-to-miss',
-        message: 'Cache status changed from HIT to MISS for this URL',
+        message: t("alert_hit_to_miss"),
         timestamp: Date.now()
       });
       tabAlerts.set(tabId, alerts.slice(-5));
@@ -123,7 +129,7 @@ const addToHistory = (tabId, entry) => {
     if (!alerts.some(a => a.type === 'cache-key-churn')) {
       alerts.push({
         type: 'cache-key-churn',
-        message: 'High cache key variability detected - may reduce hit rate',
+        message: t("alert_cache_key_churn"),
         timestamp: Date.now()
       });
       tabAlerts.set(tabId, alerts.slice(-5));
@@ -135,7 +141,7 @@ const addToHistory = (tabId, entry) => {
     const alerts = tabAlerts.get(tabId) || [];
     alerts.push({
       type: 'stale',
-      message: `Content is stale (age ${entry.analysis.age}s > max-age ${entry.analysis.ttl}s)`,
+      message: t("alert_stale", [String(entry.analysis.age), String(entry.analysis.ttl)]),
       timestamp: Date.now()
     });
     tabAlerts.set(tabId, alerts.slice(-5));
@@ -146,7 +152,7 @@ const addToHistory = (tabId, entry) => {
     const alerts = tabAlerts.get(tabId) || [];
     alerts.push({
       type: 'cache-disabled',
-      message: 'Cache-Control indicates caching is disabled (no-cache or no-store)',
+      message: t("alert_cache_disabled"),
       timestamp: Date.now()
     });
     tabAlerts.set(tabId, alerts.slice(-5));
