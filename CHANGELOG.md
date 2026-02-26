@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/M4n0x/akamai-debug-extension/compare/v1.1.5...v1.2.0) (2026-02-26)
+
+
+### Features
+
+* add i18n support (English + French) ([66c36f3](https://github.com/M4n0x/akamai-debug-extension/commit/66c36f3d3587a59177e8f970de852bba51394291))
+* **i18n:** add Korean, Chinese (Simplified) and Japanese translations ([806eb9c](https://github.com/M4n0x/akamai-debug-extension/commit/806eb9c7ff0b2665f5025ed2ac9853bcbdf2d9a2))
+
 ## [1.1.5](https://github.com/M4n0x/akamai-debug-extension/compare/v1.1.4...v1.1.5) (2026-01-24)
 
 
