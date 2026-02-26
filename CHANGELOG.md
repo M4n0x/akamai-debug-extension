@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/M4n0x/akamai-debug-extension/compare/v1.3.0...v1.3.1) (2026-02-26)
+
+
+### Bug Fixes
+
+* remove duplicate i18nApi/t declarations from popup.js ([8a12d40](https://github.com/M4n0x/akamai-debug-extension/commit/8a12d400cab35236617dcb6ac7cff395ae91eb35))
+
 # [1.3.0](https://github.com/M4n0x/akamai-debug-extension/compare/v1.2.0...v1.3.0) (2026-02-26)
 
 
