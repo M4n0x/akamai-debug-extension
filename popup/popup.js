@@ -1,11 +1,7 @@
 const api = typeof browser !== "undefined" ? browser : chrome;
 const isBrowserApi = typeof browser !== "undefined";
 
-const i18nApi = api.i18n;
-const t = (key, substitutions) => {
-  const message = i18nApi.getMessage(key, substitutions);
-  return message || key;
-};
+// i18nApi and t() are provided by i18n.js (loaded before this script)
 
 const EMPTY = "--";
 const REFRESH_INTERVAL = 1500;
